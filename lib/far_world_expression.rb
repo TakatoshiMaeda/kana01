@@ -1,7 +1,7 @@
 # データ構造をどう持つか
 class FarWorldExpression
   def initialize(expression)
-    expression.
+    left, operator, right = expression.scan(/([0-9]+)([\|\&\+\*])?(.*)?$/)
   end
 
   def evaluate
