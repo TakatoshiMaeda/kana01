@@ -28,18 +28,17 @@ class FarWorldExpression
     end
   end
 
-  def parse
+  def parse(expression)
+    left, operator, right = expression.scan(/([0-9]+)([\|\&\+\*])?(.*)?$/)[0]
+    if operator == nil
+      left
+    else
     [
-      [
-        4, '*', [
-          5, '+', [
-            6, '&', [
-              7, '|', 8
-            ]
-          ],
-        ],
-      ],
+      left,
+      operator,
+      parse(right)
     ]
+    end
   end
 
   def select_posisions(operator)
