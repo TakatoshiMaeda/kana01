@@ -1,6 +1,7 @@
+# データ構造をどう持つか
 class FarWorldExpression
   def initialize(expression)
-    @expression = expression
+    expression.
   end
 
   def evaluate
