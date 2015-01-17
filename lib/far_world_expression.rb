@@ -4,6 +4,6 @@ class FarWorldExpression
   end
 
   def evaluate
-    eval(expression)
+    eval(@expression)
   end
 end
